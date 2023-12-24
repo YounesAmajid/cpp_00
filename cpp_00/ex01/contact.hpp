@@ -6,12 +6,11 @@
 /*   By: yamajid <yamajid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:35:40 by yamajid           #+#    #+#             */
-/*   Updated: 2023/12/22 10:51:13 by yamajid          ###   ########.fr       */
+/*   Updated: 2023/12/24 12:03:43 by yamajid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -39,15 +38,3 @@ public:
     void        set_darkset_secret(std::string darkset_secret);
     
 };
-
-class PhoneBook{
-private:
-    Contact array[8];
-public:
-    void    exit();
-    int     add(int index);
-    void    search(int pos);
-    void    error();
-};
-
-#endif

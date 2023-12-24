@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.cpp                                          :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yamajid <yamajid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 20:52:03 by yamajid           #+#    #+#             */
-/*   Updated: 2023/12/18 15:56:13 by yamajid          ###   ########.fr       */
+/*   Created: 2023/12/24 10:49:36 by yamajid           #+#    #+#             */
+/*   Updated: 2023/12/24 21:10:37 by yamajid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"utils.hpp"
+#pragma once
 
-utils::utils(/* args */)
-{
-}
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include "contact.hpp"
 
-utils::~utils()
-{
-}
+class PhoneBook{
+private:
+    Contact array[8];
+public:
+    void    exit();
+    bool    add(int index);
+    void    search(int pos);
+    void    error();
+    int     change_pos(int pos);
+};
