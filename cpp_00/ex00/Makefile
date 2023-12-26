@@ -6,13 +6,13 @@
 #    By: yamajid <yamajid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/20 11:48:18 by yamajid           #+#    #+#              #
-#    Updated: 2023/12/20 11:50:43 by yamajid          ###   ########.fr        #
+#    Updated: 2023/12/26 14:27:05 by yamajid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	=	megaphone
-Run		=	clang++
-FLAGS	=	-Wall -Wextra -Werror
+Run		=	c++
+FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -f
 
 SRCS 	=	megaphone.cpp

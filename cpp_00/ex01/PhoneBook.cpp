@@ -6,15 +6,11 @@
 /*   By: yamajid <yamajid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:52:03 by yamajid           #+#    #+#             */
-/*   Updated: 2023/12/24 19:11:01 by yamajid          ###   ########.fr       */
+/*   Updated: 2023/12/26 14:55:59 by yamajid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-
-int PhoneBook::change_pos(int pos){
-    return pos + 1;
-}
 
 void PhoneBook::error(){
     std::cout << "ERROR: empty field";
@@ -78,29 +74,29 @@ void PhoneBook::search(int pos){
     std::cout << std::setw(10) << "Last name" << "|";
     std::cout << std::setw(10) << "Nickname" << "|" << std::endl;
     std::cout << std::setw(10) <<  "--------------------------------------------" << std::endl;
-    for (int i = 1; i < pos; i++)
+    for (int i = 0; i < pos; i++)
     {
         std::cout << std::setw(10) << i << "|";
         std::cout << std::setw(10) << (str = array[i].get_first_name().length() > 10 ? \
-            array[i].get_first_name().substr(0, 9) + "." : array[i].get_first_name())  << "|"; 
+            array[i].get_first_name().substr(0, 9) + "." : array[i].get_first_name())  << "|";
         std::cout << std::setw(10) <<  (str = array[i].get_last_name().length() > 10 ? \
-            array[i].get_last_name().substr(0, 9) + "." : array[i].get_last_name()) << "|"; 
+            array[i].get_last_name().substr(0, 9) + "." : array[i].get_last_name()) << "|";
         std::cout << std::setw(10) <<  (str = array[i].get_nickname().length() > 10 ? \
             array[i].get_nickname().substr(0, 9) + "." : array[i].get_nickname()) << "|" << std::endl;
         std::cout << std::setw(10) <<  "--------------------------------------------" << std::endl;
     }
     std::cout << "Enter index : ";
-    std::getline(std::cin, index); 
-    if (std::cin.good() && !index.empty() && !index[1])
+    std::getline(std::cin, index);
+    if (std::cin.good()&& index[1] == '\0')
     {
-        if ((num = 0 + index[0] - '0') >= 1 && (num = 0 + index[0] - '0') <= 8)
+        if (isdigit(index[0]) && (num = index[0] - '0') >= 0 && (num = index[0] - '0') <= 7)
         {
             if (!array[num].get_first_name().empty())
             {
-                std::cout << "Index           : " << num << std::endl; 
-                std::cout << "first name      : " << array[num].get_first_name() << std::endl; 
-                std::cout << "Last name       : " << array[num].get_last_name() << std::endl; 
-                std::cout << "Phone Num       : " << array[num].get_nickname() << std::endl; 
+                std::cout << "Index           : " << num << std::endl;
+                std::cout << "first name      : " << array[num].get_first_name() << std::endl;
+                std::cout << "Last name       : " << array[num].get_last_name() << std::endl;
+                std::cout << "Phone Num       : " << array[num].get_nickname() << std::endl;
                 std::cout << "Nickname        : " << array[num].get_phonenumber() << std::endl;
                 std::cout << "darkest secret  : " <<  array[num].get_darkest_secret() << std::endl;
             }

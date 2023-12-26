@@ -6,7 +6,7 @@
 /*   By: yamajid <yamajid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 10:49:36 by yamajid           #+#    #+#             */
-/*   Updated: 2023/12/24 21:10:37 by yamajid          ###   ########.fr       */
+/*   Updated: 2023/12/26 14:36:50 by yamajid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ public:
     bool    add(int index);
     void    search(int pos);
     void    error();
-    int     change_pos(int pos);
 };
